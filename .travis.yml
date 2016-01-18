@@ -11,4 +11,4 @@ install:
   - "pip install ephem*.tar.gz"
 
 script:
-  - "if [[ $TRAVIS_PYTHON_VERSION == 2.6 ]] ;then unit2 discover ephem ;else python -m unittest discover ephem ;fi"
+  - "if [[ $TRAVIS_PYTHON_VERSION == 2.6 ]] ;then unit2 discover ephem ;else python -m unittest discover ephem --verbose;fi"

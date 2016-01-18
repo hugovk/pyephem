@@ -10,8 +10,8 @@ from glob import glob
 def load_tests(loader, tests, pattern):
 
     # Force time zone to EST/EDT to make localtime tests work.
-    # os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
-    # time.tzset()
+    os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
+    time.tzset()
 
     # The different floating-point formatting rules in 2.6 and prior
     # ruin our doctests.
